@@ -1,13 +1,255 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "DM Sans", sans-serif !important;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* overflow: hidden !important;  */
+
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Times New Roman';
+
+}
+
+
+.black-main {
+  background-color: #101820FF !important;
+}
+
+.orange-main {
+  background-color: #F2AA4CFF !important;
+}
+
+.orange-text {
+  color: #F2AA4CFF !important;
+}
+
+.brands {
+  font-weight: 1000 !important;
+  font-size: 9rem !important;
+}
+
+.bold {
+  font-weight: 1000 !important;
+  font-size: 6rem !important;
+}
+
+.semi-bold {
+  font-weight: 1000 !important;
+  font-size: 4rem !important;
+
+}
+
+.bold-smaller {
+  font-weight: 1000 !important;
+  font-size: 2.5rem !important;
+
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif !important;
+  font-weight: 700;
+  font-style: normal !important;
+}
+
+.light {
+  color: #EEEEEE !important;
+}
+
+
+.nav-links {
+  transition: 0.5s;
+
+  position: relative;
+}
+
+.nav-links:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(2);
+  transition: 0.5s;
+  border-bottom: 3px solid #F2AA4CFF;
+}
+
+a:hover:before {
+  transform: scaleY(1.2);
+  opacity: 1;
+}
+
+.border-color {
+  border: 8px solid #F2AA4CFF !important;
+}
+
+.border-lower {
+  border: 4px solid #F2AA4CFF !important;
+}
+
+.border-small {
+  border: 2px solid #F2AA4CFF !important;
+}
+
+.bgImage {
+  background-image: url(../src/imgs/pexels-pixabay-90764.jpg);
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden !important;
+}
+
+@media screen and (min-width :992px) {
+
+  .navbar .container-fluid,
+  .navbar-expand-lg .navbar-collapse,
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column !important;
+
+  }
+
+  .navbar {
+    width: 15% !important;
+
+    background-color: #1E1E1E !important;
+
+  }
+
+}
+
+.navColor {
+  background-color: #1E1E1E;
+}
+
+
+
+.lead {
+  line-height: 35px !important;
+}
+
+.downloadCV:hover {
+  border: 0 !important;
+  background-color: #F2AA4CFF !important;
+  color: #1E1E1E !important;
+}
+
+.hire:hover {
+
+  background-color: rgb(255, 210, 151) !important;
+}
+
+.border-image {
+  border-bottom: 8px solid #F2AA4CFF !important;
+  border-left: 8px solid #F2AA4CFF !important;
+
+}
+
+.shadow:hover {
+  background-color: #F2AA4CFF;
+
+}
+
+.shadow:hover.serviceIcon i,
+.shadow:hover.serviceIcon h1,
+.shadow:hover.serviceIcon p {
+  color: #1E1E1E !important;
+
+}
+
+.borderColor {
+
+  border: 3px solid #F2AA4CFF !important;
+}
+
+.cardColor {
+  background-color: #252525;
+}
+
+.textInput {
+  color: #252525;
+}
+
+input {
+  background-color: #252525 !important;
+
+}
+
+::placeholder {
+  color: #939393 !important;
+  font-size: 1.2rem;
+  font-family: "Bebas Neue", sans-serif !important;
+}
+
+
+.inputBorder {
+  border: 2px solid #555555 !important;
+}
+
+.sendBtn:hover {
+
+  background-color: rgb(245, 196, 131) !important;
+}
+
+/* input[type=text]:focus.borderFocus{ 
+
+  border: 2px solid #882929 !important;
+  
+} */
+
+.contactCart:hover{
+  background-color: #F2AA4CFF !important;
+  border: 0 !important;
+}
+
+
+.contactCart:hover .card-title {
+ 
+  background-color: #1E1E1E !important;
+  color: #F2AA4CFF !important;
+ 
+}
+
+.contactCart:hover .cart-content  h5 ,.contactCart:hover .cart-content  h1{
+  color: #1E1E1E !important;
+}
+
+.cardSec{
+  cursor: pointer !important;
+ 
+}
+
+.cardSec:hover  .portfolio-content h1{
+
+  color:#252525 !important;
+  background-color: #F2AA4CFF !important;
+  
+
+}
+.cardContentBg{
+  background-color: #252525 !important;
+}
+a{
+  text-decoration: none !important;
+}
+
+.todosBorder{
+  border: 2px solid #F2AA4CFF !important;
+}
+
+.notfound{
+  background-color:#F9F9F9 !important;
+}
+
+
+
+.social .fa-brands:hover { 
+    color: #F2AA4CFF !important;
+}
+
+.testBg{
+
+  background-color: #3f3c3c !important;
 }
