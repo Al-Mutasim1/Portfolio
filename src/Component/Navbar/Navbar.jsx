@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useHistory, useState } from 'react'
-import { Link, Outlet, useLocation } from 'react-router-dom'
-import Home from '../Home/Home'
+import React, { useContext, useEffect, useState } from 'react';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import { mediaContext } from '../Context/mediaContext';
 
 
@@ -32,7 +31,7 @@ export default function Navbar() {
   }, [innerWidth])
 
   return <>
-    {(pathName !== '/contact' && pathName !== '/todosproject' && pathName !== '/commerceproject') ? <div className='d-flex main-page border-color overflow-hidden vh-100 '>
+    {(pathName === '/') ? <div className='d-flex main-page border-color overflow-hidden vh-100 '>
       <nav className="navbar navbar-expand-lg flex-column main-page h-100  d-flex navbar-white navColor">
         <div className="container-fluid ">
           <Link className="navbar-brand  my-5 pb-5 bebas-neue-regular semi-bold  text-light" to={'/'}>L <span className='orange-text'>O </span>G <span className='orange-text'>O</span></Link>
