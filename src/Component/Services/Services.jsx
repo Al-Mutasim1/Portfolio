@@ -8,7 +8,7 @@ export default function Services() {
   useEffect(() => {setInnerWidth(window.innerWidth)} ,[innerWidth])
 
   return <>
-  {innerWidth < 992 ?   <div className="services-section  bg-black bg-gradient">
+  {innerWidth < 992 ?   <div className="services-section  cardContentBg ">
       <div className="container  cardContentBg  vh-100 ">
         <div className="about-title pb-2  text-center mx-auto ">
           <h1 className=' text-white pt-5 pb-2 '>SERVICE </h1>

@@ -13,8 +13,7 @@ export default function Contact() {
 
   return <>
     {innerWidth < 992 ? <div className="contact-section min-vh-100  cardContentBg"> 
-      <div className="container  min-vh-100  cardContentBg 
-       px-5">
+      <div className="container  min-vh-100  cardContentBg ">
         <div className="title-contact my-5  ">
           <h1 className='text-white text-center mb-3  fw-bold'>CONTACT ME</h1>
           <p className=' text-white text-center mx-auto'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, eveniet iusto, </p>
@@ -24,8 +23,8 @@ export default function Contact() {
 
           <div className="col-lg-4  my-3 ">
             <div className=" shadow contactCart  d-flex justify-content-center align-items-center p-4  ">
-              <div className='me-5 '>
-                <i className="fa-regular fa-desktop borderColor orange-text card-title  p-2 rounded rounded-circle  "></i>
+              <div className='me-3 '>
+                <i className=" fa-solid fa-desktop borderColor orange-text card-title  p-2 rounded rounded-circle  "></i>
               </div>
               <div className=' cart-content text-center'>
                 <h3 className='text-white  fw-bold mb-3 text-center'>CALL ME</h3>
@@ -41,7 +40,7 @@ export default function Contact() {
 
           <div className="col-lg-4  my-3  ">
             <div className=" shadow contactCart d-flex justify-content-center align-items-center p-4  ">
-              <div className='me-5'>
+              <div className='me-3'>
                 <i className="fa-regular fa-envelope borderColor orange-text card-title  p-2 rounded rounded-circle  "></i>
               </div>
               <div className='cart-content text-center'>
@@ -58,8 +57,8 @@ export default function Contact() {
 
           <div className="col-lg-4  my-3  ">
             <div className=" shadow  contactCart  d-flex justify-content-center align-items-center p-4  ">
-              <div className='me-5'>
-                <i className="fa-regular fa-location-dot borderColor orange-text card-title  p-2 rounded rounded-circle  "></i>
+              <div className='me-3'>
+                <i className="fa-solid fa-location-dot borderColor orange-text card-title  p-2 rounded rounded-circle  "></i>
               </div>
               <div className='cart-content text-center'>
                 <h3 className='text-white fw-bold mb-3'>LOCATION</h3>

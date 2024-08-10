@@ -32,18 +32,18 @@ export default function Navbar() {
   }, [innerWidth])
 
   return <>
-    {(pathName === '/') ? <div className='d-flex main-page border-color overflow-hidden vh-100 '>
+    {(pathName !== '/contact' && pathName !== '/todosproject' && pathName !== '/commerceproject') ? <div className='d-flex main-page border-color overflow-hidden vh-100 '>
       <nav className="navbar navbar-expand-lg flex-column main-page h-100  d-flex navbar-white navColor">
         <div className="container-fluid ">
           <Link className="navbar-brand  my-5 pb-5 bebas-neue-regular semi-bold  text-light" to={'/'}>L <span className='orange-text'>O </span>G <span className='orange-text'>O</span></Link>
-          <button className="navbar-toggler orange-main  mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler orange-main   mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon "></span>
           </button>
-          <div className="collapse navbar-collapse fw-bold" id="navbarSupportedContent">
+          <div className="collapse navbar-collapse fw-bold mt-3 " id="navbarSupportedContent">
             <ul className="navbar-nav  mb-2  ">
 
               <li className="nav-item mb-4 d-flex justify-content-center align-items-center ">
-                <i className="fa-solid fa-house orange-text"></i>
+                <i className="fa-solid fa-house orange-text "></i>
                 <Link className="nav-link active nav-links  light " aria-current="page" to={'/'}>Home</Link>
               </li>
 
@@ -89,7 +89,7 @@ export default function Navbar() {
           <button className="navbar-toggler orange-main  mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon "></span>
           </button>
-          <div className="collapse navbar-collapse fw-bold" id="navbarSupportedContent">
+          <div className="collapse navbar-collapse fw-bold  mt-3" id="navbarSupportedContent">
             <ul className="navbar-nav  mb-2  ">
 
               <li className="nav-item mb-4 d-flex justify-content-center align-items-center ">
@@ -117,19 +117,11 @@ export default function Navbar() {
                 <Link className="nav-link nav-links  light ms-2" to={'/projects'}>Projects</Link>
               </li>
             </ul>
-            <div className="social orange-text  fs-2 mt-5 d-flex mx-auto justify-content-center align-items-center  row">
-              <div className="col-md-3">
-                <Link target="_blank" to={'https://github.com/Al-Mutasim1?tab=repositories'} className='text-white'><i className="fa-brands fa-github me-4 "></i></Link>
-              </div>
-              <div className="col-md-3">
-                <Link target="_blank" to={'https://www.linkedin.com/feed/'} className='text-white'><i className="fa-brands fa-linkedin me-4 "></i></Link>
-              </div>
-              <div className="col-md-3">
-                <Link target="_blank" to={'https://www.instagram.com'} className='text-white'><i className="fa-brands fa-instagram me-4 "></i></Link>
-              </div>
-              <div className="col-md-3">
-                <Link target="_blank" to={'https://x.com/i/flow/login'} className='text-white text-center'><i class="fa-brands fa-square-x-twitter "></i></Link>
-              </div>
+            <div className="social orange-text fs-2 mt-5 d-flex mx-auto justify-content-center align-items-center ">
+              <Link target="_blank" to={'https://github.com/Al-Mutasim1?tab=repositories'} className='text-white'><i className="fa-brands fa-github me-4 "></i></Link>
+              <Link target="_blank" to={'https://www.linkedin.com/feed/'} className='text-white'><i className="fa-brands fa-linkedin me-4 "></i></Link>
+              <Link target="_blank" to={'https://www.instagram.com'} className='text-white'><i className="fa-brands fa-instagram me-4 "></i></Link>
+              <Link target="_blank" to={'https://x.com/i/flow/login'} className='text-white text-center'><i class="fa-brands fa-square-x-twitter "></i></Link>
             </div>
           </div>
         </div>
