@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import todos1 from '../../imgs/AFTER/0.png';
 import todos2 from '../../imgs/AFTER/1.png';
@@ -11,9 +11,132 @@ import todos8 from '../../imgs/AFTER/7.png';
 import todos9 from '../../imgs/AFTER/8.png';
 
 
-export default function commerceProject() {
+export default function CommerceProject() {
+
+    
+  const [innerWidth , setInnerWidth] = useState(0);
+
+  useEffect(() => {setInnerWidth(window.innerWidth)} ,[innerWidth])
+
+
+
     return <>
-        <div className="todos-section  w-100 bg-black bg-gradient">
+      {innerWidth < 992 ?   <div className="todos-section  cardContentBg">
+            <div className="container cardContentBg  min-vh-100 ">
+                <div className="project-title pb-5  text-center mx-auto ">
+                    <h1 className=' fw-bolder  pt-5 orange-text '>FRESH CART <span className=' text-white text-uppercase'>React </span> </h1>
+                    
+                     <p className=' text-white mt-4'>In a <span className='orange-text fw-bold'>Fresh Cart App</span>   is a dynamic <span className='orange-text fw-bold'>E-commerce Platform</span> designed to provide users with a seamless shopping experience.  </p> 
+                     <hr/>
+                     <Link target="_blank" to={'https://al-mutasim1.github.io/Fresh-Cart/#/login'}><span className=' h3  orange-text fw-bold'># You can take a tour of my site </span></Link>
+
+                    
+
+                </div>
+               
+
+
+
+                <div className="row todosBorder  gy-4  my-2  ">
+                <h1 className=' text-white  fw-bolder text-center'>FRESH CART <span className=' orange-text  '>GALLERY</span></h1>
+                    
+
+                    <div className="col-md-4">
+                        <div className=" cardSec   ">
+                            <div className='cardPreview '>
+                                <div className="cart-img">
+                                    <img className='w-100' src={todos8} alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className="col-md-4">
+                        <div className=" cardSec   ">
+                            <div className='cardPreview '>
+                                <div className="cart-img">
+                                    <img className='w-100' src={todos4} alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-md-4">
+                        <div className=" cardSec   ">
+                            <div className='cardPreview '>
+                                <div className="cart-img">
+                                    <img className='w-100' src={todos2} alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-md-4">
+                        <div className=" cardSec   ">
+                            <div className='cardPreview '>
+                                <div className="cart-img">
+                                    <img className='w-100' src={todos6} alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-md-4">
+                        <div className=" cardSec   ">
+                            <div className='cardPreview '>
+                                <div className="cart-img">
+                                    <img className='w-100' src={todos5} alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className=" cardSec   ">
+                            <div className='cardPreview '>
+                                <div className="cart-img">
+                                    <img className='w-100' src={todos9} alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-md-4">
+                        <div className=" cardSec   ">
+                            <div className='cardPreview '>
+                                <div className="cart-img">
+                                    <img className='w-100' src={todos7} alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-md-4">
+                        <div className=" cardSec   ">
+                            <div className='cardPreview '>
+                                <div className="cart-img">
+                                    <img className='w-100' src={todos3} alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                </div>
+
+                
+
+
+
+            </div>
+        </div>:  <div className="todos-section  w-100 bg-black bg-gradient">
             <div className="container cardContentBg  min-vh-100 ">
                 <div className="project-title pb-5  text-center mx-auto ">
                     <h1 className=' semi-bold  pt-5 orange-text '>FRESH CART <span className='semi-bold text-white text-uppercase'>React </span> </h1>
@@ -128,7 +251,7 @@ export default function commerceProject() {
 
 
             </div>
-        </div>
+        </div>}
 
 
     </>

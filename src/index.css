@@ -98,7 +98,7 @@ a:hover:before {
 .bgImage {
   background-image: url(../src/imgs/pexels-pixabay-90764.jpg);
   background-position: center center;
-  background-size: cover;
+  background-size: cover ;
   overflow: hidden !important;
 }
 
@@ -220,6 +220,7 @@ input {
   cursor: pointer !important;
  
 }
+
 
 .cardSec:hover  .portfolio-content h1{
 

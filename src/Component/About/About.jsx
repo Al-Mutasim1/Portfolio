@@ -1,21 +1,13 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import profilePicture from "../../imgs/smiling-man-with-arms-crossed.jpg"
 import { motion, stagger } from 'framer-motion';
 import { mediaContext } from '../Context/mediaContext';
 
 export default function About() {
 
-  const {innerHeight , setInnerHeight , innerWidth , setInnerWidth } = useContext(mediaContext);
+  const [innerWidth , setInnerWidth] = useState(0);
 
-  useEffect(() => {
-    setInnerHeight(window.innerHeight) ; 
-    console.log(window.innerHeight);
-  }, [innerHeight])
-
-  useEffect(() => {
-    setInnerWidth(window.innerWidth) ; 
-    console.log(window.innerWidth);
-  }, [innerWidth])
+  useEffect(() => {setInnerWidth(window.innerWidth)} ,[innerWidth])
 
 
 
@@ -59,7 +51,60 @@ export default function About() {
 
 
   return <>
-    <div className="about-section bg-black bg-gradient w-100">
+   {innerWidth < 992 ?  <div className="about-section  cardContentBg">
+      <div className="container  cardContentBg h-100 overflow-hidden ">
+        <div className="about-title pb-5 mb-3 text-center mx-auto ">
+          <h1 className=' text-white pt-5 pb-2 '>ABOUT ME </h1>
+          <p className=' text-white  text-center mx-auto'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti culpa ex voluptate impedit quam doloribus magni laudantium nihil, natus commodi sequi fuga at similique, consequ. Assumenda.</p>
+        </div>
+
+        <div className="row  mt-2 justify-content-center align-items-center px-5">
+          <div className="col-md-4">
+            <img className='w-100 border-image' src={profilePicture} alt="" />
+          </div>
+
+          <div className="col-md-7 offset-md-1 ">
+            <div className="about-me pt-2">
+
+              <h4 className='text-center text-white'>Al-Mu'tasim Ali</h4>
+              <motion.h5
+                variants={textVariant}
+                initial='hidden'
+                animate='visible'
+                className=' orange-text pb-2 text-center'>
+                {textFrondEnd.split("").map((char, index) =>
+                      <motion.span
+                        key={index}
+                        variants={spanVariant}
+                      >{char}
+                      </motion.span>
+                    )}
+              </motion.h5>
+
+              <h6 className='text-white text-center pb-4'>Hello! I'm Alex Smith a self-taught & award winning Digital Designer &
+                Developer with over five years work experience.  </h6>
+            </div>
+
+            <div className="buttons mb-2  text-center ">
+              <button
+             
+               className='btn border-small downloadCV orange-text text-center fw-bolder py-2 me-3 '>
+                Download CV</button>
+              <button 
+              
+              className='btn hire orange-main text-center fw-bolder py-2 my-3 '>
+                Hire Me</button>
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>: <div className="about-section bg-black bg-gradient w-100">
       <div className="container  cardContentBg h-100 ">
         <div className="about-title pb-5 mb-5 text-center mx-auto ">
           <h1 className='semi-bold text-white pt-5 pb-4 '>ABOUT ME </h1>
@@ -121,6 +166,6 @@ export default function About() {
         </div>
 
       </div>
-    </div>
+    </div>}
   </>
 }
